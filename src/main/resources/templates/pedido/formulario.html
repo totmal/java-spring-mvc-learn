@@ -17,6 +17,24 @@
 						</div>
 					</div>
 					<div class="form-group">
+						<label for="valorNegociado">Preço do Produto</label>
+						<input th:field="*{valorNegociado}" th:errorClass="is-invalid" class="form-control" placeholder="preco do produto"/>
+						<small>Adicione o preço aqui.</small>
+						<div class="invalid-feedback" th:errors="*{valorNegociado}">
+							Erros preço do produto
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="dataDaEntrega">Data Entrega</label>
+						<input type="date" th:field="*{dataDaEntrega}" th:errorClass="is-invalid" class="form-control" placeholder="data do produto"/>
+						<small>Procure em um site o produto que vocÃª deseja e cole a url da pÃ¡gina aqui.</small>
+						<div class="invalid-feedback" th:errors="*{dataDaEntrega}">
+							Erros da data do produto
+						</div>
+					</div>
+					
+					<div class="form-group">
 						<label for="urlProduto">Url</label>
 						<input th:field="*{urlProduto}" th:errorClass="is-invalid" class="form-control" placeholder="url do produto"/>
 						<small>Procure em um site o produto que vocÃª deseja e cole a url da pÃ¡gina aqui.</small>
@@ -33,7 +51,7 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="descricao">DescriÃ§Ã£o</label>
+						<label for="descricao">Descrição</label>
 						<textarea th:field="*{descricao}" class="form-control" placeholder="Adicione detalhes importantes para ajudar o comprador."></textarea>
 					</div>
 					<button class="btn btn-primary" type="submit">Cadastrar</button>
