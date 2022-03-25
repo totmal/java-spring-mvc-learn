@@ -1,0 +1,51 @@
+<head th:replace="~{base :: head}"></head>
+<div class="container">
+	<div class="row">
+		<div class="col-4"></div>
+		<div class="col-4">
+			<form class="mbr-form" action="validador.php" method="POST">
+				<div data-for="name">
+					<div class="form-group">
+						<input type="text" class="form-control px-3" name="nome"
+							placeholder="exemplo.exemplo" REQUIRED data-form-field="Name"
+							id="name-header15-j">
+					</div>
+				</div>
+				<div data-for="name">
+					<div class="form-group">
+						<input type="password" class="form-control px-3" name="senha"
+							placeholder="Senha do Portal" REQUIRED data-form-field="Name"
+							id="name-header15-j">
+					</div>
+				</div>
+
+
+				<span style="padding-right: 14% !important;" class="input-group-btn"><button
+						type="submit" class="btn btn-form btn-info display-4">Acessar
+						Qualidade</button></span>
+			</form>
+		</div>
+		<div class="col-4"></div>
+	</div>
+</div>
+<form class="mbr-form" action="validador.php" method="POST">
+	<div data-for="name">
+		<div class="form-group">
+			<input type="text" class="form-control px-3" name="nome"
+				placeholder="exemplo.exemplo" REQUIRED data-form-field="Name"
+				id="name-header15-j">
+		</div>
+	</div>
+	<div data-for="name">
+		<div class="form-group">
+			<input type="password" class="form-control px-3" name="senha"
+				placeholder="Senha do Portal" REQUIRED data-form-field="Name"
+				id="name-header15-j">
+		</div>
+	</div>
+
+
+	<span style="padding-right: 14% !important;" class="input-group-btn"><button
+			type="submit" class="btn btn-form btn-info display-4">Acessar
+			Qualidade</button></span>
+</form>
