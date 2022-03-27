@@ -21,15 +21,20 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http
 		.authorizeRequests()
-			.anyRequest().authenticated()
+		.antMatchers("/home/**")
+		.permitAll()
+			.anyRequest()
+			.authenticated()
 		.and()
 		.formLogin(form -> form
             .loginPage("/login")
-            .defaultSuccessUrl("/home", true)
+            .defaultSuccessUrl("/usuario/pedido", true)
             .permitAll()
         )
-		.logout(logout -> logout.logoutUrl("/logout"))
-		.csrf().disable();
+		.logout(logout -> logout.logoutUrl("/logout")
+		.logoutSuccessUrl("/home")
+		)
+		;
 	}
 	
 	@Override
@@ -38,8 +43,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		
 		// UserDetails user =
 		// 		 User.builder()
-		// 			.username("joao")
-		// 			.password(encoder.encode("joao"))
+		// 			.username("maria")
+		// 			.password(encoder.encode("maria"))
 		// 			.roles("ADM")
 		// 			.build();
 
@@ -49,6 +54,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.jdbcAuthentication()
 			.dataSource(dataSource)
 			.passwordEncoder(encoder)
+			
 			;
 		
 		

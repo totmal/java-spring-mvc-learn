@@ -33,6 +33,22 @@
 						</div>
 					</div>
 					<div class="form-group">
+						<label for="valorNegociado">Imagem</label>
+						<input th:field="*{valorNegociado}" th:errorclass="is-invalid" class="form-control" placeholder="Preço acordado"/>
+						<small>Insira o seu preço.</small>
+						<div class="invalid-feedback" th:errors="*{valorNegociado}">
+							Erros referente ao preço
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="urlImagem">Data Entrega</label>
+						<input type="date" th:field="*{dataEntrega}" th:errorclass="is-invalid" class="form-control" placeholder="url da imagem"/>
+						<small>Data de previsãod e entrega.</small>
+						<div class="invalid-feedback" th:errors="*{dataEntrega}">
+							Erro em caso de data da entrega não funcionar
+						</div>
+					</div>
+					<div class="form-group">
 						<label for="descricao">Descricao</label>
 						<textarea th:field="*{descricao}" class="form-control" placeholder="Adicione detalhes importantes para ajudar o comprador"></textarea>
 					</div>

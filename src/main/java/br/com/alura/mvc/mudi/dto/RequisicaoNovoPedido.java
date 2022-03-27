@@ -1,5 +1,7 @@
 package br.com.alura.mvc.mudi.dto;
 
+import java.time.LocalDate;
+
 import javax.validation.constraints.NotBlank;
 
 import br.com.alura.mvc.mudi.model.Pedido;
@@ -7,14 +9,33 @@ import br.com.alura.mvc.mudi.model.StatusPedido;
 
 public class RequisicaoNovoPedido {
 	
-	@NotBlank
+	@NotBlank 
 	private String nomeProduto;
 	
-	@NotBlank
+	@NotBlank 
 	private String urlProduto;
 	
-	@NotBlank
+	@NotBlank 
 	private String urlImagem;
+
+	private LocalDate dataDaEntrega;
+
+	private String valorNegociado;
+
+	
+	public String getValorNegociado() {
+		return valorNegociado;
+	}
+	public LocalDate getDataDaEntrega() {
+		return dataDaEntrega;
+	}
+	public void setDataDaEntrega(LocalDate dataDaEntrega) {
+		this.dataDaEntrega = dataDaEntrega;
+	}
+	public void setValorNegociado(String valorNegociado) {
+		this.valorNegociado = valorNegociado;
+	}
+
 	private String descricao;
 	
 	public String getNomeProduto() {
